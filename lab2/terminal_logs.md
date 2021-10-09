@@ -1,4 +1,4 @@
-```
+```sh
 [tecatexas@10 test]$ ls -lR
 .:
 total 8
