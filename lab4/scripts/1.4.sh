@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Good morning, $USER!"
-cal && date "+%T"
+date "+%T" && cal
 cat ~/TODO
