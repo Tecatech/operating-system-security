@@ -4,7 +4,7 @@
 int main() {
     int pid = fork();
     
-    for (int i = 0; i < 100; i++) {
+    for (int j = 0; j < 100; j++) {
         if (pid > 0) {
             fork();
         }
