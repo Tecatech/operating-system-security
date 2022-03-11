@@ -1,0 +1,145 @@
+    1  ps xaf
+    2  ps xawf -eo pid,user,cgroup,args
+    3  systemd-cgls
+    4  ll /usr/lib/systemd/system/
+    5  ll /run/systemd/system/
+    6  ll /etc/systemd/system/
+    7  systemctl -t help
+    8  systemctl status
+    9  systemctl --type=service
+   10  systemctl status auditd.service
+   11  systemctl status firewalld.service
+   12  systemctl is-active auditd.service
+   13  systemctl is-active firewalld.service
+   14  systemctl is-enabled auditd.service
+   15  systemctl is-enabled firewalld.service
+   16  systemctl list-dependencies --after auditd.service
+   17  systemctl list-dependencies --after firewalld.service
+   18  systemctl list-dependencies --before auditd.service
+   19  systemctl list-dependencies --before firewalld.service
+   20  systemctl list-units --type=service
+   21  systemctl list-units --type=service --all
+   22  systemctl list-units --type=socket --all
+   23  systemctl list-units --type=target --all
+   24  systemctl list-units --type=device --all
+   25  systemctl list-units --type=mount --all
+   26  systemctl list-units --type=automount --all
+   27  systemctl list-units --type=swap --all
+   28  systemctl list-unit-files --type=service
+   29  systemctl list-unit-files --type=service --all
+   30  systemctl list-unit-files --type=socket --all
+   31  systemctl list-unit-files --type=target --all
+   32  systemctl list-unit-files --type=device --all
+   33  systemctl list-unit-files --type=mount --all
+   34  systemctl list-unit-files --type=automount --all
+   35  systemctl list-unit-files --type=swap --all
+   36  systemctl --failed --type=service
+   37  systemctl --failed --type=socket
+   38  systemctl --failed --type=target
+   39  systemctl --failed --type=device
+   40  systemctl --failed --type=mount
+   41  systemctl --failed --type=automount
+   42  systemctl --failed --type=swap
+   43  curl 127.0.0.1
+   44  sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+   45  sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+   46  yum update -y
+   47  yum check-update
+   48  yum install httpd -y
+   49  yum install apache2 -y
+   50  systemctl status httpd.service
+   51  curl 127.0.0.1
+   52  systemctl start httpd.service
+   53  chkconfig httpd on
+   54  systemctl status httpd.service
+   55  curl 127.0.0.1
+   56  systemctl restart httpd.service
+   57  systemctl status httpd.service
+   58  systemctl stop httpd.service
+   59  systemctl enable httpd.service
+   60  systemctl status httpd.service
+   61  systemctl start httpd.service
+   62  systemctl status httpd.service
+   63  systemctl disable httpd.service
+   64  systemctl mask httpd.service
+   65  systemctl status httpd.service
+   66  systemctl start httpd.service
+   67  systemctl unmask httpd.service
+   68  systemctl list-units --type=target
+   69  systemctl list-units --type=target --all
+   70  systemctl get-default
+   71  ll /etc/systemd/system/default.target
+   72  systemctl set-default multi-user.target
+   73  systemctl isolate multi-user.target
+   74  ll /etc/systemd/system/default.target
+   75  systemctl set-default graphical.target
+   76  systemctl --no-wall rescue
+   77  systemctl --no-wall emergency
+   78  systemctl poweroff
+   79  systemctl halt
+   80  systemctl --no-wall poweroff
+   81  shutdown --poweroff 23:00
+   82  shutdown --halt +2
+   83  shutdown -c
+   84  systemctl --no-wall reboot
+   85  systemctl suspend
+   86  systemctl hibernate
+   87  systemctl default
+   88  journalctl
+   89  journalctl -b
+   90  journalctl --list-boots
+   91  journalctl -b 2
+   92  journalctl --since "2022-03-12 22:00:00"
+   93  journalctl --since yesterday
+   94  journalctl --since today
+   95  journalctl -u network.service
+   96  journalctl -f
+   97  journalctl -k
+   98  journalctl -p err
+   99  journalctl --disk-usage
+  100  hostnamectl
+  101  hostnamectl set-hostname --static tecatech_alpha
+  102  hostnamectl
+  103  hostnamectl set-hostname tecatech_alpha
+  104  hostnamectl
+  105  hostnamectl set-hostname --transient tecatech_alpha
+  106  hostnamectl
+  107  hostnamectl set-hostname --pretty tecatech_alpha
+  108  hostnamectl
+  109  hostnamectl set-hostname server -H root@172.102.2.24
+  110  timedatectl
+  111  timedatectl status
+  112  systemctl stop systemd-timesyncd
+  113  nano /etc/systemd/timesyncd.conf
+  114  systemctl start systemd-timesyncd
+  115  timedatectl list-timezones
+  116  timedatectl set-timezone UTC
+  117  timedatectl set-timezone "Europe/Moscow"
+  118  timedatectl set-time 23:50:30
+  119  systemctl disable --now chronyd
+  120  timedatectl set-time 2020-07-10
+  121  timedatectl set-time '2020-07-10 11:45:20'
+  122  timedatectl set-local-rtc 1
+  123  timedatectl set-local-rtc 0
+  124  timedatectl set-ntp on
+  125  timedatectl set-ntp off
+  126  localectl
+  127  localectl status
+  128  localectl list-locales
+  129  localectl set-locale LANG="C.UTF-8"
+  130  localectl
+  131  localectl set-locale LANG="ru_RU.utf8"
+  132  localectl list-keymaps
+  133  localectl set-keymap cz
+  134  localectl set-x11-keymap cz
+  135  localectl --no-convert set-x11-keymap cz
+  136  loginctl
+  137  loginctl status
+  138  loginctl list-sessions
+  139  loginctl list-users
+  140  loginctl
+  141  loginctl kill-user alpha
+  142  loginctl terminate-user gamma
+  143  loginctl kill-session 2
+  144  loginctl terminate-session 3
+  145  history > lab9_history.txt
