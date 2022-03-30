@@ -11,4 +11,4 @@
    11  rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
    12  cd rpmbuild/BUILD/kernel*/linux*
    13  ls ~/rpmbuild/BUILD/kernel-4.18.0-348.7.1.el8/linux-4.18.0-348.7.1.el8.x86_64/
-   14  history > lab12_history.txt
+   14  history > lab11_history.txt
