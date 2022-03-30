@@ -1,0 +1,49 @@
+    1  ldd /bin/login | grep pam
+    2  ll /lib64/libpam*
+    3  ll /lib64/security/
+    4  nano /etc/pam.d/system-auth
+    5  nano /etc/pam.d/su
+    6  man su
+    7  man hostname
+    8  sudo nano /etc/pam.d/su
+    9  su -c "hostname mephi"
+   10  sudo nano /etc/pam.d/su
+   11  su -c "hostname mephi"
+   12  sudo nano /etc/pam.d/su
+   13  man useradd
+   14  sudo useradd -G wheel user1
+   15  sudo passwd user1
+   16  su - user1
+   17  sudo nano /etc/pam.d/su
+   18  su - user1
+   19  sudo nano /etc/pam.d/su
+   20  sudo nano /etc/pam.d/login
+   21  sudo touch /etc/securetty
+   22  su -
+   23  su - user1
+   24  sudo nano /etc/pam.d/login
+   25  man pam_pwquality
+   26  sudo nano /etc/security/pwquality.conf
+   27  sudo nano /etc/pam.d/system-auth
+   28  sudo passwd user1
+   29  sudo nano /etc/security/pwquality.conf
+   30  sudo nano /etc/pam.d/system-auth
+   31  man pam_limits
+   32  sudo nano /etc/security/limits.conf
+   33  su - user1
+   34  sudo nano /etc/security/limits.conf
+   35  wget https://raw.githubusercontent.com/linux-pam/linux-pam/master/examples/check_user.c
+   36  nano check_user.c
+   37  sudo yum install pam-devel
+   38  gcc check_user.c -o check_user -lpam -lpam_misc
+   39  sudo nano /etc/pam.d/check
+   40  ./check_user tecatexas
+   41  sudo nano /etc/pam.d/check
+   42  ./check_user user1
+   43  nano check_user.c
+   44  gcc check_user.c -o check_user -lpam -lpam_misc
+   45  ./check_user tecatexas
+   46  ./check_user user1
+   47  su -
+   48  ./check_user tecatexas
+   49  history > lab8_history.txt
