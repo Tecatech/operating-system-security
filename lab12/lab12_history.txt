@@ -1,0 +1,14 @@
+    1  sudo yum install autoconf automake bison elfutils-libelf-devel flex ftp gcc gcc-c++ libtool make ncurses-devel openssl-devel rpmdevtools
+    2  uname -r
+    3  rpmdev-setuptree
+    4  yumdownloader --source kernel
+    5  rpm -i kernel-4.18.0-348.7.1.el8_5.src.rpm
+    6  ls rpmbuild/SPECS/
+    7  ls rpmbuild/SOURCES/
+    8  rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec
+    9  ls ~/rpmbuild/SRPMS/
+   10  yum-builddep /home/tecatexas/rpmbuild/SRPMS/kernel-4.18.0-348.7.1.el8.src.rpm
+   11  rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
+   12  cd rpmbuild/BUILD/kernel*/linux*
+   13  ls ~/rpmbuild/BUILD/kernel-4.18.0-348.7.1.el8/linux-4.18.0-348.7.1.el8.x86_64/
+   14  history > lab12_history.txt
