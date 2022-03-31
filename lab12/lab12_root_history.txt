@@ -1,0 +1,44 @@
+    1  ls -dZ /etc
+    2  touch /etc/file1
+    3  ls -lZ /etc/file1
+    4  chcon -t httpd_sys_content_t /etc/file1
+    5  chcon -R -t httpd_sys_content_t /etc/
+    6  touch file1
+    7  ls -lZ file1
+    8  chcon -t samba_share_t file1
+    9  ls -lZ file1
+   10  restorecon -v file1
+   11  mkdir /web
+   12  touch /web/file{1,2,3}
+   13  ls -dZ /web
+   14  ls -lZ /web
+   15  chcon -R -t httpd_sys_content_t /web/
+   16  ls -dZ /web
+   17  ls -lZ /web
+   18  restorecon -R -v /web/
+   19  semanage fcontext -C -l
+   20  semanage fcontext -a -t httpd_sys_content_t file1
+   21  restorecon -v file1
+   22* touch /etc/file1
+   23  ls -lZ /etc/file1
+   24  ls -dZ /etc
+   25  semanage fcontext -a -t samba_share_t /etc/file1
+   26  ls -lZ /etc/file1
+   27  semanage fcontext -C -l
+   28  restorecon -v /etc/file1
+   29  ls -dZ /web
+   30  ls -lZ /web
+   31  semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
+   32  ls -dZ /web
+   33  ls -lZ /web
+   34  restorecon -R -v /web/
+   35  semanage fcontext -d "/web(/.*)?"
+   36  mount server:/export /local/mount/point -o \ context="system_u:object_r:httpd_sys_content_t:s0"
+   37  mount /dev/sda2 /web/ -o defcontext="system_u:object_r:samba_share_t:s0"
+   38  mount server:/export /local/mount/point -o context="system_u:object_r:httpd_sys_content_t:s0"
+   39  mount server:/export/web /local/web -o context="system_u:object_r:httpd_sys_content_t:s0"
+   40  mount server:/export/database /local/database -o context="system_u:object_r:mysqld_db_t:s0"
+   41  mount server:/export/web /local/web -o nosharecache,context="system_u:object_r:httpd_sys_content_t:s0"
+   42  mount server:/export/database /local/database -o \ nosharecache,context="system_u:object_r:mysqld_db_t:s0"
+   43  server:/export /local/mount/ nfs context="system_u:object_r:httpd_sys_content_t:s0" 0 0
+   44  history > lab12_root_history.txt
