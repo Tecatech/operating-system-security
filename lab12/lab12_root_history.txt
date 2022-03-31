@@ -19,13 +19,13 @@
    19  semanage fcontext -C -l
    20  semanage fcontext -a -t httpd_sys_content_t file1
    21  restorecon -v file1
-   22* touch /etc/file1
-   23  ls -lZ /etc/file1
+   22  touch /etc/file2
+   23  ls -lZ /etc/file2
    24  ls -dZ /etc
-   25  semanage fcontext -a -t samba_share_t /etc/file1
-   26  ls -lZ /etc/file1
+   25  semanage fcontext -a -t samba_share_t /etc/file2
+   26  ls -lZ /etc/file2
    27  semanage fcontext -C -l
-   28  restorecon -v /etc/file1
+   28  restorecon -v /etc/file2
    29  ls -dZ /web
    30  ls -lZ /web
    31  semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
