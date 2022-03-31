@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo `date +%d-%m-%Y`
+sudo yum install gnuplot
