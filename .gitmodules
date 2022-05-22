@@ -1,0 +1,3 @@
+[submodule "session-monitoring-service"]
+	path = session-monitoring-service
+	url = git@github.com:Tecatech/session-monitoring-service.git
