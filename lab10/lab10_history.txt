@@ -27,7 +27,7 @@
    27  sudo nano b19-515-13
    28  chmod +x b19-515-13
    29  cd ~/rpmbuild/SOURCES/
-   30  tar -cvzf b19-515-13-1.0.tar.gz b19-515-13-1.0
+   30  tar -cvzf b19-515-13-1.0.tar.gz b19-515-13-1.0/
    31  cd ../SPECS/
    32  sudo nano b19-515-13.spec
    33  rpmbuild -ba b19-515-13.spec
@@ -38,7 +38,7 @@
    38  cd c-b19-515-13-1.0/
    39  sudo nano c-b19-515-13.c
    40  cd ~/rpmbuild/SOURCES/
-   41  tar -cvzf c-b19-515-13-1.0.tar.gz c-b19-515-13-1.0
+   41  tar -cvzf c-b19-515-13-1.0.tar.gz c-b19-515-13-1.0/
    42  cd ../SPECS/
    43  sudo nano c-b19-515-13.spec
    44  rpmbuild -ba c-b19-515-13.spec
