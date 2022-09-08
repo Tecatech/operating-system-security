@@ -1,4 +1,4 @@
-```sh
+```
 [tecatexas@mephi ~]$ sudo nano /etc/pam.d/su
 [tecatexas@mephi ~]$ man useradd
 [tecatexas@mephi ~]$ sudo useradd -G wheel user1

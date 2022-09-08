@@ -1,4 +1,4 @@
-```sh
+```
 [tecatexas@10 ~]$ nano server.php
 [tecatexas@10 ~]$ php server.php
 [tecatexas@10 ~]$ nc -u 127.0.0.1 10000
