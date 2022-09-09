@@ -7,8 +7,8 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=tecatexas
-ExecStart=/usr/bin/env php /home/tecatexas/server.php
+User=tecatech
+ExecStart=/usr/bin/env php /home/tecatech/server.php
 
 [Install]
 WantedBy=multi-user.target

@@ -37,13 +37,13 @@
    37  sudo yum install pam-devel
    38  gcc check_user.c -o check_user -lpam -lpam_misc
    39  sudo nano /etc/pam.d/check
-   40  ./check_user tecatexas
+   40  ./check_user tecatech
    41  sudo nano /etc/pam.d/check
    42  ./check_user user1
    43  nano check_user.c
    44  gcc check_user.c -o check_user -lpam -lpam_misc
-   45  ./check_user tecatexas
+   45  ./check_user tecatech
    46  ./check_user user1
    47  su -
-   48  ./check_user tecatexas
+   48  ./check_user tecatech
    49  history > lab8_history.txt

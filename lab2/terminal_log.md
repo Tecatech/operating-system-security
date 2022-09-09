@@ -1,18 +1,18 @@
 ```sh
-[tecatexas@10 test]$ ls -lR
+[tecatech@10 test]$ ls -lR
 .:
 total 8
-drw-rwxr-x. 2 tecatexas tecatexas 22 Sep 25 15:23 dir
--rw-r-----. 1 root      tecatexas  5 Sep 25 15:16 file
--rw-------. 1 tecatexas tecatexas  0 Sep 25 15:35 file1
--rw-rw-rw-. 1 tecatexas tecatexas  0 Sep 25 15:36 file2
--rw-rw-r--. 1 tecatexas tecatexas  7 Sep 25 15:23 new_file
+drw-rwxr-x. 2 tecatech tecatech 22 Sep 25 15:23 dir
+-rw-r-----. 1 root     tecatech  5 Sep 25 15:16 file
+-rw-------. 1 tecatech tecatech  0 Sep 25 15:35 file1
+-rw-rw-rw-. 1 tecatech tecatech  0 Sep 25 15:36 file2
+-rw-rw-r--. 1 tecatech tecatech  7 Sep 25 15:23 new_file
 
 ./dir:
 ls: cannot access './dir/new_file': Permission denied
 total 0
 -????????? ? ? ? ?            ? new_file
-[tecatexas@10 test]$ history
+[tecatech@10 test]$ history
     1  cd ~
     2  mkdir test && cd test
     3  touch file && ll file

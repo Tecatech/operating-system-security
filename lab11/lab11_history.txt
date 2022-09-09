@@ -7,7 +7,7 @@
     7  ls rpmbuild/SOURCES/
     8  rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec
     9  ls ~/rpmbuild/SRPMS/
-   10  yum-builddep /home/tecatexas/rpmbuild/SRPMS/kernel-4.18.0-348.7.1.el8.src.rpm
+   10  yum-builddep /home/tecatech/rpmbuild/SRPMS/kernel-4.18.0-348.7.1.el8.src.rpm
    11  rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
    12  cd rpmbuild/BUILD/kernel*/linux*
    13  ls ~/rpmbuild/BUILD/kernel-4.18.0-348.7.1.el8/linux-4.18.0-348.7.1.el8.x86_64/
