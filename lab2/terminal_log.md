@@ -1,4 +1,4 @@
-```sh
+```
 [tecatech@10 test]$ ls -lR
 .:
 total 8
